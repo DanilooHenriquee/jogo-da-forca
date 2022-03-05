@@ -13,7 +13,6 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(113, 211, 211);
 }
 
 #main {
@@ -66,8 +65,7 @@ img#img-forca {
 }
 
 #section-forca p {
-    font-size: 20pt;
-    
+    font-size: 20pt;  
 }
 
 #secundaria {
@@ -167,16 +165,4 @@ img#img-forca {
     color: red;
     background-color: rgba(218, 76, 76, 0.5);
     border: none;
-}
-
-@media (max-width: 960px) {
-
-    #main {
-        flex-direction: column;
-    }
-
-    .alfabeto {
-        max-width: 800px;
-    }
-
 }
