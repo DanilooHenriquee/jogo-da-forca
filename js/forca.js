@@ -46,6 +46,78 @@ const palavras = [
     palavra12 = {
         nome: 'leite',
         dica: 'Bebida'
+    },
+    palavra13 = {
+        nome: 'chocolate',
+        dica: 'Bebida'
+    },
+    palavra14 = {
+        nome: 'wisky',
+        dica: 'Bebida'
+    },
+    palavra15 = {
+        nome: 'vinho',
+        dica: 'Bebida'
+    },
+    palavra16 = {
+        nome: 'refrigerante',
+        dica: 'Bebida'
+    },
+    palavra17 = {
+        nome: 'suco',
+        dica: 'Bebida'
+    },
+    palavra18 = {
+        nome: 'civic',
+        dica: 'Carro'
+    },
+    palavra19 = {
+        nome: 'corolla',
+        dica: 'Carro'
+    },
+    palavra20 = {
+        nome: 'camaro',
+        dica: 'Carro'
+    },
+    palavra21 = {
+        nome: 'lamborghini',
+        dica: 'Carro'
+    },
+    palavra22 = {
+        nome: 'ferrari',
+        dica: 'Carro'
+    },
+    palavra23 = {
+        nome: 'limousine',
+        dica: 'Carro'
+    },
+    palavra24 = {
+        nome: 'vermelho',
+        dica: 'Cor'
+    },
+    palavra25 = {
+        nome: 'magenta',
+        dica: 'Cor'
+    },
+    palavra26 = {
+        nome: 'amarelo',
+        dica: 'Cor'
+    },
+    palavra27 = {
+        nome: 'turquesa',
+        dica: 'Cor'
+    },
+    palavra28 = {
+        nome: 'lilas',
+        dica: 'Cor'
+    },
+    palavra29 = {
+        nome: 'marrom',
+        dica: 'Cor'
+    },
+    palavra30 = {
+        nome: 'castanho',
+        dica: 'Cor'
     }
 ];
 
