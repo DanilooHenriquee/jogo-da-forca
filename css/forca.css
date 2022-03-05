@@ -110,7 +110,15 @@ img#img-forca {
     background-color:rgb(89, 95, 107);
 }
 
-.displayNone {
+.btn-desativado {
+    background-color: rgb(131, 135, 138);
+}
+
+.btn-desativado:hover {
+    background-color: rgb(131, 135, 138);
+}
+
+.display-none {
     display: none;
 }
 

@@ -57,7 +57,6 @@ let posicaoLetrasChutadas = [];
 let letrasErradas = [];
 
 function sortearPalavra() {
-
     let indexArray = parseInt(Math.random() * palavras.length);
 
     palavraSorteada = palavras[indexArray].nome.toUpperCase();
@@ -68,7 +67,6 @@ sortearPalavra();
 
 function mostrarDica() {
     let dica = document.getElementById('dica');
-
     dica.textContent = 'Dica: ' + dicaSorteada;
 }
 
@@ -78,13 +76,11 @@ let palavra = document.getElementById('palavra');
 let arrayLetrasPalavraSorteada = palavraSorteada.split('');
 
 function mostrarPalavraSorteada() {
-
     let numLetras = palavraSorteada.length;
 
     for (i = 0; i < numLetras; i++) {
         palavra.innerHTML = palavra.innerHTML + `<div class="underline" > <p id="letra${i}" class="ocultar-letra"> ${arrayLetrasPalavraSorteada[i]} </p> </div>`;
     }
-    console.log(arrayLetrasPalavraSorteada);
 }
 
 mostrarPalavraSorteada();
@@ -97,15 +93,12 @@ function verificaChute(letra) {
     } else {
         document.getElementById('palavra').disabled = true;
     }
-
-
 }
 
 let mensagemResultado;
 let resultado;
 
 function comparaChuteComPalavraSorteada(letra) {
-
     let btnStyle;
     let index = arrayLetrasPalavraSorteada.indexOf(letra);
 
@@ -123,12 +116,14 @@ function comparaChuteComPalavraSorteada(letra) {
             mensagemResultado = "Parabéns! você ganhou!";
             resultado = true;
             mostrarMensagem(mensagemResultado, resultado);
-            desativarBotoes();
+            desativarBotoesAlfabeto();
+            desativarBotao('mudar-palavra');
+            removeDisplayNone('recomecar');
         }
 
         mostraLetraPalavraSorteada(posicaoLetrasChutadas);
-
         btnStyle = 'btn-acerto';
+
     } else {
         numTentativas--;
 
@@ -136,49 +131,38 @@ function comparaChuteComPalavraSorteada(letra) {
             mensagemResultado = "Que pena! você perdeu!";
             resultado = false;
             mostrarMensagem(mensagemResultado, resultado);
-            desativarBotoes();
+            desativarBotoesAlfabeto();
+            desativarBotao('mudar-palavra');
             mostraPalavraQuandoErra();
+            removeDisplayNone('recomecar');
         }
 
         letrasErradas.push(letra);
         btnStyle = 'btn-erro';
     }
-    
 
     let numLetrasErradas = letrasErradas.length;
     alterarForca(numLetrasErradas);
     alterarStyleBotao(letra, btnStyle);
-
-    console.log(posicaoLetrasChutadas);
-    console.log(arrayLetrasPalavraSorteada);
-    console.log(index + " " + letra + " + comparaChute");
-    console.log('Tentativas: ' + numTentativas);
-    console.log('Acertos: ' + numAcertos);
 }
 
 function mostraLetraPalavraSorteada(index) {
 
-    console.log("index letra palavra sorteada: " + index)
-
-    for(i = 0; i < index.length; i++) {
+    for (i = 0; i < index.length; i++) {
         let letraPalavraSorteada = document.getElementById('letra' + index[i]);
+
         letraPalavraSorteada.classList.remove('ocultar-letra');
         letraPalavraSorteada.classList.add('revelar-letra');
-        console.log("Letra Palavra Sorteada: " + letraPalavraSorteada);
     }
 }
 
 function mostraPalavraQuandoErra() {
 
-    console.log("Execução dessa função MostraPalavraQuandoErra");
-
-    for(i = 0; i < arrayLetrasPalavraSorteada.length; i++) {
+    for (i = 0; i < arrayLetrasPalavraSorteada.length; i++) {
         let letrasarrayLetrasPalavraSorteada = document.getElementById('letra' + i);
+        
         letrasarrayLetrasPalavraSorteada.classList.remove('ocultar-letra');
         letrasarrayLetrasPalavraSorteada.classList.add('revelar-letra', 'palavra-errada');
-
-        console.log('TESTE : ' + arrayLetrasPalavraSorteada.length);
-
     }
 }
 
@@ -186,13 +170,22 @@ function alterarStyleBotao(letra, btnStyle) {
     document.getElementById('letra-' + letra).classList.add(btnStyle);
 }
 
-function desativarBotoes() {
+function desativarBotoesAlfabeto() {
     let alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
     for (i = 0; i < alfabeto.length; i++) {
         document.getElementById('letra-' + alfabeto[i]).disabled = true;
     }
+}
 
+function desativarBotao(id) {
+    let btnDesativado = document.getElementById(id);
+    btnDesativado.disabled = true;
+    btnDesativado.classList.add('btn-desativado');
+}
+
+function removeDisplayNone(id) {
+    document.getElementById(id).classList.remove('display-none');
 }
 
 function alterarForca(numErros) {
@@ -211,7 +204,7 @@ async function mostrarMensagem(mensagem, resultado) {
 }
 
 function aguardar(segundos) {
-        return new Promise(resolve => setTimeout(resolve, segundos));
+    return new Promise(resolve => setTimeout(resolve, segundos));
 }
 
 let btnRecomecar = document.getElementById('recomecar');
