@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(113, 211, 211);
+}
+
+#main {
+    background: white;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-forca {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#dica {
+    margin: 10px;
+}
+
+img#img-forca {
+    margin: 10px;
+    display: block;
+    width: 180px;
+}
+
+#palavra {
+    margin: 10px 20px;
+}
+
+#palavra p {
+    transition: 1.5s ease-out;
+}
+
+.palavra-errada {
+    color: red;
+}
+
+.underline {
+    height: 35px;
+    align-content: center;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 30px 5px 10px 5px;
+}
+
+#section-forca p {
+    font-size: 20pt;
+    
+}
+
+#secundaria {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+#secundaria div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+}
+
+#mensagem {
+    margin: 10px 10px 0px;
+    text-transform: uppercase;
+}
+
+.msg-acerto {
+    color: green;
+}
+
+.msg-erro {
+    color: red;
+}
+
+.btn {
+    margin: 10px 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(102, 110, 121); 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+.btn:hover {
+    background-color:rgb(89, 95, 107);
+}
+
+.displayNone {
+    display: none;
+}
+
+#section-alfabeto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.alfabeto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    height: 50%;
+    margin-top: 30px;
+}
+
+.letras {
+    text-align: center;
+    width: 60px;
+    height: 50px;
+    margin: 10px;
+    font-size: 16pt;
+    cursor: pointer;
+}
+
+.ocultar-letra {
+    opacity: 0;
+}
+
+.revelar-letra {
+    
+    opacity: 1;
+}
+
+.btn-acerto {
+    color: green;
+    background-color: rgba(76, 218, 76, 0.5);
+    border: none;
+}
+
+.btn-erro {
+    color: red;
+    background-color: rgba(218, 76, 76, 0.5);
+    border: none;
+}
+
+@media (max-width: 960px) {
+
+    #main {
+        flex-direction: column;
+    }
+
+    .alfabeto {
+        max-width: 800px;
+    }
+
+}

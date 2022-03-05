@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/forca.css">
+    <title>Jogo da Forca</title>
+</head>
+
+<body>
+
+    <main id="main">
+        <section id="section-forca">
+            <div id="principal">
+                <p id="dica"></p>
+                <img id="img-forca" src="image/forca0.jpg" alt="forca">
+            </div>
+            <div id="palavra">
+            </div>
+            <div id="secundaria">
+                <div>
+                    <p id="mensagem"></p>
+                </div>
+                <div>
+                    <button id="ver-palavra" class="btn">Ver Palavra</button>
+                    <button id="mudar-palavra" class="btn">Mudar Palavra</button>
+                    <button id="recomecar" class="btn">Recomeçar</button>
+                </div>
+            </div>
+        </section>
+        <section id="section-alfabeto">
+            <div class="alfabeto">
+                <button id="letra-A" class="letras" onclick="verificaChute('A')">A</button>
+                <button id="letra-B" class="letras" onclick="verificaChute('B')">B</button>
+                <button id="letra-C" class="letras" onclick="verificaChute('C')">C</button>
+                <button id="letra-D" class="letras" onclick="verificaChute('D')">D</button>
+                <button id="letra-E" class="letras" onclick="verificaChute('E')">E</button>
+                <button id="letra-F" class="letras" onclick="verificaChute('F')">F</button>
+                <button id="letra-G" class="letras" onclick="verificaChute('G')">G</button>
+                <button id="letra-H" class="letras" onclick="verificaChute('H')">H</button>
+                <button id="letra-I" class="letras" onclick="verificaChute('I')">I</button>
+                <button id="letra-J" class="letras" onclick="verificaChute('J')">J</button>
+                <button id="letra-K" class="letras" onclick="verificaChute('K')">K</button>
+                <button id="letra-L" class="letras" onclick="verificaChute('L')">L</button>
+                <button id="letra-M" class="letras" onclick="verificaChute('M')">M</button>
+                <button id="letra-N" class="letras" onclick="verificaChute('N')">N</button>
+                <button id="letra-O" class="letras" onclick="verificaChute('O')">O</button>
+                <button id="letra-P" class="letras" onclick="verificaChute('P')">P</button>
+                <button id="letra-Q" class="letras" onclick="verificaChute('Q')">Q</button>
+                <button id="letra-R" class="letras" onclick="verificaChute('R')">R</button>
+                <button id="letra-S" class="letras" onclick="verificaChute('S')">S</button>
+                <button id="letra-T" class="letras" onclick="verificaChute('T')">T</button>
+                <button id="letra-U" class="letras" onclick="verificaChute('U')">U</button>
+                <button id="letra-V" class="letras" onclick="verificaChute('V')">V</button>
+                <button id="letra-W" class="letras" onclick="verificaChute('W')">W</button>
+                <button id="letra-X" class="letras" onclick="verificaChute('X')">X</button>
+                <button id="letra-Y" class="letras" onclick="verificaChute('Y')">Y</button>
+                <button id="letra-Z" class="letras" onclick="verificaChute('Z')">Z</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/forca.js"></script>
+</body>
+
+</html>
